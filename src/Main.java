@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
+    public static ArrayList<String> shoppingList;
+    public static Scanner sc;
     public static void main(String[] args) {
 //        System.out.println("Hello world!");
 //        ArrayList<Integer> numbers = new ArrayList();
@@ -51,18 +53,18 @@ public class Main {
         studentsSimple.add(studentasSimple);
 
 
-        ArrayList<String> shoppingList = new ArrayList();
-        Scanner sc = new Scanner(System.in);
+        shoppingList = new ArrayList();
+        sc = new Scanner(System.in);
         while (true) {
             printInfoMessages();
-            int item = intInput(sc);
+            int item = intInput();
             sc.nextLine();
             switch (item) {
                 case 1:
-                   addItem(shoppingList,sc);
+                   addItem();
                     break;
                 case 2:
-                   printItems(shoppingList);
+                   printItems();
                     break;
                 case 5:
                     System.exit(1);
@@ -92,7 +94,7 @@ public class Main {
 //        }
 
     }
-    public static int intInput(Scanner sc){
+    public static int intInput(){
         while(true) {
             try {
                return sc.nextInt();
@@ -102,12 +104,12 @@ public class Main {
             }
         }
     }
-    public static void printItems(ArrayList<String> shoppingList){
+    public static void printItems(){
         for (int i = 0; i < shoppingList.size(); i++) {
             System.out.println(shoppingList.get(i));
         }
     }
-    public static void addItem(ArrayList<String> shoppingList, Scanner sc){
+    public static void addItem(){
         System.out.println("parasykite prekes pavadinima");
         String input = sc.nextLine();
         shoppingList.add(input);
