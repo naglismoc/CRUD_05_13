@@ -28,8 +28,27 @@ public class Main {
 //        }
 
 
+        ArrayList<ArrayList<String>> students = new ArrayList<>();
+        ArrayList<String> studentas = new ArrayList<>();
+        studentas.add("Jonas");
+        studentas.add("Jokubaitis");
+        studentas.add("1994-02-06");
+        studentas.add("labasasjonas@gmail.com");
+        students.add(studentas);
+        ArrayList<String> studentas2 = new ArrayList<>();
+        studentas2.add("Petras");
+        studentas2.add("Jakobuonis");
+        studentas2.add("1992-05-06");
+        studentas2.add("labasaspetras@gmail.com");
+        students.add(studentas2);
 
-
+        ArrayList<String[]> studentsSimple = new ArrayList<>();
+        String[] studentasSimple = new String[4];
+        studentasSimple[0] = "Jonas";
+        studentasSimple[1] = "Jokubaitis";
+        studentasSimple[2] = "1994-02-06";
+        studentasSimple[3] = "labasasjonas@gmail.com";
+        studentsSimple.add(studentasSimple);
 
 
         ArrayList<String> shoppingList = new ArrayList();
